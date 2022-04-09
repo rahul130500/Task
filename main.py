@@ -7,7 +7,7 @@ class gui:
     def __init__(self,mainwin):
         self.counter = 0
         self.mainwin = mainwin
-        self.mainwin.title("Tkinter Picture Frame")
+        self.mainwin.title("Image Carousel")
         self.mainwin.state("normal")
         self.mainwin.configure(bg="Yellow")
         self.frame = tk.Frame(mainwin)
@@ -45,7 +45,7 @@ class gui:
         self.render = ImageTk.PhotoImage(self.load2)
         self.img.config(image=self.render)
         self.img.image = self.render
-        root.after(2000,self.pic)
+        root.after(3000,self.pic)
 
 
 root = tk.Tk()

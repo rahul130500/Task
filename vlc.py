@@ -1,20 +1,23 @@
-import cv2
-import numpy as np
+
+from tkinter import *
+from tkvideo import tkvideo
 import glob
 
-cap = cv2.VideoCapture('sample.mp4')
-if (cap.isOpened()== False):
-    print("Error opening video file")
-while(cap.isOpened()):
-    ret, frame = cap.read()
-    if ret == True:
-        cv2.namedWindow("Frame", cv2.WND_PROP_FULLSCREEN)          
-        cv2.setWindowProperty("Frame", cv2.WND_PROP_FULLSCREEN, 1)
-        cv2.imshow('Frame', frame)
-        if cv2.waitKey(25) & 0xFF == ord('q'):
-	        break
-    else:
-	    break
-cap.release()
+root = Tk()
+root.title('Video Player')
 
-cv2.destroyAllWindows()
+video_label = Label(root)
+video_label.pack()
+
+counter = 0
+video_list = []
+# for name in glob.glob(r''):
+#     val = name
+#     video_list.append(val)
+
+print(4)
+player = tkvideo("sample.mp4", video_label,
+                    loop = 0, size = (1920, 1080))
+player.play()    
+root.mainloop()
+print(5)

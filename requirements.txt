@@ -1,6 +1,9 @@
 imageio==2.16.1
 imageio-ffmpeg==0.4.5
 numpy==1.22.3
+opencv-python==4.5.5.64
+pafy==0.5.5
 Pillow==9.1.0
+python-vlc==3.0.16120
 tk==0.1.0
 tkVideo==0.1
